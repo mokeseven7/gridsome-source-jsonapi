@@ -1,0 +1,56 @@
+{
+  "name": "@mokeseven/gridsome-source-jsonapi",
+  "version": "0.0.1",
+  "description": "A gridsome api client for parsing JSON API spec'd API's",
+  "main": "dist/gridsome-source-jsonapi.cjs.js",
+  "module": "dist/gridsome-source-jsonapi.esm.js",
+  "browser": "dist/gridsome-source-jsonapi.umd.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test:update": "jest -u --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "prepare": "npm  build",
+    "pretest": "npm  run build"
+  },
+  "renovate": {
+    "extends": [
+      "config:js-lib"
+    ],
+    "automerge": false,
+    "rangeStrategy": "replace"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "gridsome"
+  ],
+  "author": "Michael McGrath <mike@dopefruit.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "babel-core": "6.26.3",
+    "babel-jest": "24.9.0",
+    "concurrently": "4.1.2",
+    "coveralls": "3.0.6",
+    "jest": "24.9.0",
+    "rollup": "1.19.4",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "10.0.2",
+    "rollup-plugin-node-resolve": "5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mokeseven7/gridsome-source-jsonapi.git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mokeseven7/gridsome-source-jsonapi.git/issues"
+  },
+  "homepage": "https://github.com/mokeseven7/gridsome-source-jsonapi.git#readme"
+}
